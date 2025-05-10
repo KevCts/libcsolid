@@ -1,7 +1,5 @@
 #include "model.h"
 #include "cvide/solve.h"
-#include <stddef.h>
-#include <stdio.h>
 
 Model model;
 

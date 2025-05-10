@@ -3,7 +3,6 @@
 
 #include "element.h"
 #include <stdbool.h>
-#include <stddef.h>
 
 typedef struct {
     bool is_set;

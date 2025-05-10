@@ -1,7 +1,6 @@
 #ifndef CSOLID_BAR_H
 #define CSOLID_BAR_H
 
-#include <stddef.h>
 #include "common.h"
 
 typedef struct {
