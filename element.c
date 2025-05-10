@@ -1,4 +1,5 @@
 #include "model.h"
+#include <stdio.h>
 
 void add_element(element e){
     if (++model.elements_count  > model.elements_capacity) {

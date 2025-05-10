@@ -1,4 +1,5 @@
 #include "model.h"
+#include <stdio.h>
 
 void add_section(){
     if (model.sections_count + 1 > model.sections_capacity) {

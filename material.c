@@ -1,4 +1,5 @@
 #include "model.h"
+#include <stdio.h>
 
 void add_material(){
     if (model.materials_count + 1  > model.materials_capacity) {
