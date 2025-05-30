@@ -5,6 +5,7 @@ void add_section(){
     if (model.sections_count + 1 > model.sections_capacity) {
         model.sections = realloc(model.sections, (++model.sections_capacity) * sizeof(section));
     }
+    model.sections_count++;
 }
 
 bool set_section_parameter(size_t id, section_parameter sp, double value) {
