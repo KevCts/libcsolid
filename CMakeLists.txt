@@ -23,3 +23,4 @@ set(HEADERS
 )
 
 add_library(libcsolid ${SRCS} ${HEADERS})
+target_link_libraries(libcsolid libcvide)
