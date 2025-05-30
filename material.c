@@ -5,7 +5,7 @@ void add_material(){
     if (model.materials_count + 1  > model.materials_capacity) {
         model.materials = realloc(model.materials, (++model.materials_capacity) * sizeof(material));
     }
-    materials_count++;
+    model.materials_count++;
 }
 
 bool set_material_caracteristic(size_t id, material_caracteristics mc, double value) {
