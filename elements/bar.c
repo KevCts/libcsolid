@@ -65,5 +65,5 @@ void add_bar(size_t i, size_t j, size_t sec, size_t mat) {
 }
 
 void print_bar(bar* bar_to_print) {
-    printf("\tNode 1 :\t %ld\t|\tNode 2 :\t %ld\t|\tSection :\t%ld\t|Material :\t%ld\t|", bar_to_print->n1->id, bar_to_print->n2->id, bar_to_print->sec->id, bar_to_print->mat->id);
+    printf("\tNode 1 :\t %ld\t|\tNode 2 :\t %ld\t|\tSection :\t%ld\t|\tE :\t%ld\t|", bar_to_print->n1->id, bar_to_print->n2->id, bar_to_print->sec->parameters[SEC], bar_to_print->mat->parameters[EX]);
 }
