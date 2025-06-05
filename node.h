@@ -20,9 +20,9 @@ typedef enum {
 
 void add_node(double, double, double);
 
-void add_boundary(size_t i, direction dir, double value);
+void set_boundary(size_t i, direction dir, double value);
 
-void add_force(size_t i, direction dir, double value);
+void set_force(size_t i, direction dir, double value);
 
 void edit_node(size_t, double, double, double);
 
