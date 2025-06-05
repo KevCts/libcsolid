@@ -1,3 +1,4 @@
+#include "element.h"
 #include "model.h"
 #include <stdio.h>
 
@@ -11,7 +12,12 @@ void add_element(element e){
 
 void list_elements() {
     for (size_t i = 0; i < model.elements_count; i++) {
-        printf("|\t Element : %ld\t|\tType = %d\t|\n", i, model.elements[i].type);
+        printf("|\t Element : %ld\t|\tType = %d\t|", i, model.elements[i].type);
+        switch (model.elements[i].type) {
+            case BAR:
+                print_bar(model.elements + i);
+                break;
+        }
     }
 }
 

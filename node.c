@@ -23,14 +23,14 @@ void add_node(double x, double y, double z) {
     model.nodes_count++;
 }
 
-void add_boundary(size_t i, direction dir, double value) {
+void set_boundary(size_t i, direction dir, double value) {
     if (i < model.nodes_count) {
         model.boundaries[6 * i + dir].is_set = true;
         model.boundaries[6 * i + dir].value = value;
     }
 }
 
-void add_force(size_t i, direction dir, double value) {
+void set_force(size_t i, direction dir, double value) {
     if (i < model.nodes_count) {
         model.forces[6 * i + dir] = value;
     }
@@ -47,6 +47,64 @@ void edit_node(size_t i, double x, double y, double z) {
 void list_nodes() {
     for (size_t i = 0; i < model.nodes_count; i++) {
         printf("|\t Node : %ld\t|\tx = %lf\t|\ty = %lf\t|\tz = %lf\t|\n", i, model.nodes[i].x, model.nodes[i].y, model.nodes[i].z);
+    }
+}
+
+void list_boundaries() {
+    for (size_t i = 0; i < model.nodes_count; i++) {
+        for(int j = 0; j < 6; j++) {
+            if (model.boundaries[i + j].is_set) {
+                printf("|\t Node : %ld\t|\t", i);
+                switch (j) {
+                    case UX:
+                        printf("UX : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                    case UY:
+                        printf("UY : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                    case UZ:
+                        printf("UZ : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                    case RX:
+                        printf("RX : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                    case RY:
+                        printf("RY : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                    case RZ:
+                        printf("RZ : %lf\t|\n", model.boundaries[i+j].value);
+                        break;
+                }
+            }
+        }
+    }
+}
+
+void list_forces() {
+    for (size_t i = 0; i < model.nodes_count; i++) {
+        for(int j = 0; j < 6; j++) {
+            printf("|\t Node : %ld\t|\t", i);
+            switch (j) {
+                case UX:
+                    printf("UX : %lf\t|\n", model.forces[i+j]);
+                    break;
+                case UY:
+                    printf("UY : %lf\t|\n", model.forces[i+j]);
+                    break;
+                case UZ:
+                    printf("UZ : %lf\t|\n", model.forces[i+j]);
+                    break;
+                case RX:
+                    printf("RX : %lf\t|\n", model.forces[i+j]);
+                    break;
+                case RY:
+                    printf("RY : %lf\t|\n", model.forces[i+j]);
+                    break;
+                case RZ:
+                    printf("RZ : %lf\t|\n", model.forces[i+j]);
+                    break;
+            }
+        }
     }
 }
 

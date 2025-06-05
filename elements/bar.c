@@ -63,3 +63,7 @@ void add_bar(size_t i, size_t j, size_t sec, size_t mat) {
     model.elements[model.elements_count].type = BAR;
     model.elements[model.elements_count++].content.b = create_bar(n1, n2, s, m);
 }
+
+void print_bar(bar* bar_to_print) {
+    printf("\tNode 1 :\t %ld\t|\tNode 2 :\t %ld\t|\tSection :\t%ld\t|Material :\t%ld\t|", bar->n1->id, bar->n2->id, bar->sec->id, bar->mat->id);
+}

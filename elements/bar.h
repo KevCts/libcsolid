@@ -17,4 +17,6 @@ bool bar_replace_node(bar*, node*, node*);
 
 void add_bar(size_t, size_t, size_t, size_t);
 
+void print_bar(bar* bar_to_print);
+
 #endif
