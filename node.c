@@ -57,22 +57,22 @@ void list_boundaries() {
                 printf("|\t Node : %ld\t|\t", i);
                 switch (j) {
                     case UX:
-                        printf("UX : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("UX : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                     case UY:
-                        printf("UY : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("UY : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                     case UZ:
-                        printf("UZ : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("UZ : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                     case RX:
-                        printf("RX : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("RX : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                     case RY:
-                        printf("RY : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("RY : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                     case RZ:
-                        printf("RZ : %lf\t|\n", model.boundaries[i+j].value);
+                        printf("RZ : %lf\t|\n", model.boundaries[6*i+j].value);
                         break;
                 }
             }
@@ -86,22 +86,22 @@ void list_forces() {
             printf("|\t Node : %ld\t|\t", i);
             switch (j) {
                 case UX:
-                    printf("UX : %lf\t|\n", model.forces[i+j]);
+                    printf("UX : %lf\t|\n", model.forces[6*i+j]);
                     break;
                 case UY:
-                    printf("UY : %lf\t|\n", model.forces[i+j]);
+                    printf("UY : %lf\t|\n", model.forces[6*i+j]);
                     break;
                 case UZ:
-                    printf("UZ : %lf\t|\n", model.forces[i+j]);
+                    printf("UZ : %lf\t|\n", model.forces[6*i+j]);
                     break;
                 case RX:
-                    printf("RX : %lf\t|\n", model.forces[i+j]);
+                    printf("RX : %lf\t|\n", model.forces[6*i+j]);
                     break;
                 case RY:
-                    printf("RY : %lf\t|\n", model.forces[i+j]);
+                    printf("RY : %lf\t|\n", model.forces[6*i+j]);
                     break;
                 case RZ:
-                    printf("RZ : %lf\t|\n", model.forces[i+j]);
+                    printf("RZ : %lf\t|\n", model.forces[6*i+j]);
                     break;
             }
         }
