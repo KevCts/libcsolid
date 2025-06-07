@@ -53,7 +53,7 @@ void list_nodes() {
 void list_boundaries() {
     for (size_t i = 0; i < model.nodes_count; i++) {
         for(int j = 0; j < 6; j++) {
-            if (model.boundaries[i + j].is_set) {
+            if (model.boundaries[6*i + j].is_set) {
                 printf("|\t Node : %ld\t|\t", i);
                 switch (j) {
                     case UX:
